@@ -1,5 +1,5 @@
 use Rack::Static,
-    :urls => ['/fonts', './images', './javascripts', './stylesheets'],
+    :urls => ['/fonts', '/images', '/javascripts', '/stylesheets'],
     :root => 'build',
     :index => 'index.html'
 
