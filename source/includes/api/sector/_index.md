@@ -6,10 +6,10 @@
 const http = require('http');
 
 const headers = []
-headers.push({ Accept: "application/vnd.alertizen+json;version=1;" } ); 
+headers.push({ Accept: "application/vnd.sample+json;version=1;" } ); 
 headers.push({ Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" } ); 
 
-const url = "https://alertizen.herokuapp.com/api/sectors"
+const url = "https://sample.herokuapp.com/api/sectors"
 http.get(url);
 ```
 
@@ -19,7 +19,7 @@ var urlRequest = URLRequest(url: url)
 urlRequest.httpMethod = HTTPMethod.get.rawValue
 
 var headers: HTTPHeaders = HTTPHeaders()
-headers["Accept"] = "application/vnd.alertizen+json;version=1;"
+headers["Accept"] = "application/vnd.sample+json;version=1;"
 headers["Authorization"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 urlRequest.allHTTPHeaderFields = headers
 
@@ -29,8 +29,8 @@ let request = Alamofire.request(urlRequest).responseJSON { response in
 ```
 
 ```shell
-curl https://alertizen.herokuapp.com/api/sectors
-  -H "Accept: application/vnd.alertizen+json;version=1;"
+curl https://sample.herokuapp.com/api/sectors
+  -H "Accept: application/vnd.sample+json;version=1;"
   -H "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
   -X GET
 ```
@@ -70,5 +70,5 @@ This endpoint retrieves all Sectors.
 
 ### HTTP Request
 
-`GET https://alertizen.herokuapp.com/api/sectors`
+`GET https://sample.herokuapp.com/api/sectors`
 

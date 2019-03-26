@@ -4,7 +4,7 @@
 const http = require('http');
 
 const headers = [] 
-headers.push({ Accept: "application/vnd.alertizen+json;version=1;" } ); 
+headers.push({ Accept: "application/vnd.sample+json;version=1;" } ); 
 headers.push({ Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" } ); 
 
 const payload = {
@@ -19,7 +19,7 @@ http.put(url, payload);
 let url = "https://alertsizen.herokuapp.com/api/alerts/1"
 
 let headers: HTTPHeaders = [
-  "Accept": "application/vnd.alertizen+json;version=1;"
+  "Accept": "application/vnd.sample+json;version=1;"
   "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 ]
 
@@ -34,8 +34,8 @@ Alamofire.request(url, method: .put, parameters: payload, encoding: JSONEncoding
 ```
 
 ```shell
-curl https://alertizen.herokuapp.com/api/alerts/1
-  -H "Accept: application/vnd.alertizen+json;version=1;"
+curl https://sample.herokuapp.com/api/alerts/1
+  -H "Accept: application/vnd.sample+json;version=1;"
   -H "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
   -X PUT
   --data '{ "is_active": false }'

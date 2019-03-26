@@ -4,7 +4,7 @@
 const http = require('http');
 
 const headers = [] 
-headers.push({ Accept: "application/vnd.alertizen+json;version=1;" } ); 
+headers.push({ Accept: "application/vnd.sample+json;version=1;" } ); 
 headers.push({ Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" } ); 
 
 const payload = {
@@ -15,7 +15,7 @@ const payload = {
   owner: 1
 }
 
-const url = "https://alertizen.herokuapp.com/api/dnds"
+const url = "https://sample.herokuapp.com/api/dnds"
 http.post(url, payload);
 ```
 
@@ -24,7 +24,7 @@ http.post(url, payload);
 let url = "https://alertsizen.herokuapp.com/api/dnds"
 
 let headers: HTTPHeaders = [
-  "Accept": "application/vnd.alertizen+json;version=1;"
+  "Accept": "application/vnd.sample+json;version=1;"
   "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 ]
 
@@ -43,8 +43,8 @@ Alamofire.request(url, method: .post, parameters: payload, encoding: JSONEncodin
 
 
 ```shell
-curl https://alertizen.herokuapp.com/api/dnds
-  -H "Accept: application/vnd.alertizen+json;version=1;"
+curl https://sample.herokuapp.com/api/dnds
+  -H "Accept: application/vnd.sample+json;version=1;"
   -H "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
   -X POST
   --data '{ "manual": false "scheduled": false "from": "10:30 PM", "to": "08:00 PM", "owner": 1 }'
@@ -69,7 +69,7 @@ This endpoint create a Do Not Disturb Settings.
 
 ### HTTP Request
 
-`POST https://alertizen.herokuapp.com/api/dnds`
+`POST https://sample.herokuapp.com/api/dnds`
 
 ### Request Payload
 

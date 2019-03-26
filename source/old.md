@@ -8,7 +8,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
 
 toc_footers:
-  - <a href='https://www.alertizen.com'>Alertizen</a>
+  - <a href='https://www.sample.com'>sample</a>
 
 includes:
   - errors
@@ -18,15 +18,15 @@ search: true
 
 # Introduction
 
-Welcome to the Alertizen API! Alertizen Web and Mobile app developers can use the API to access Alertizen API endpoints, which can get and set user information in our database. It also provides APIs for sending Push Notifications, Email Alerts and Text Alerts.
+Welcome to the sample API! sample Web and Mobile app developers can use the API to access sample API endpoints, which can get and set user information in our database. It also provides APIs for sending Push Notifications, Email Alerts and Text Alerts.
 
 We have language bindings in Shell and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-Also provided a [Postman File](https://www.alertizen.com). Feel free to download and import the Postman file to test the APIs.
+Also provided a [Postman File](https://www.sample.com). Feel free to download and import the Postman file to test the APIs.
 
-Alertizen uses JWT Token to allow access to the API. Please Register / Login to get a JWT Token.  
+sample uses JWT Token to allow access to the API. Please Register / Login to get a JWT Token.  
 
-Alertizen API expects for the JWT AUTH Token to be included in all API requests (except user registration and login) to the server in a header that looks like the following:
+sample API expects for the JWT AUTH Token to be included in all API requests (except user registration and login) to the server in a header that looks like the following:
 
 `Authorization: JWT-AUTH-TOKEN`
 
@@ -42,7 +42,7 @@ You must replace <code>JWT-AUTH-TOKEN</code> with your JWT Auth Token.
 
 ```javascript
 const http = require('http');
-const url = "https://alertizen.herokuapp.com/auth/signup"
+const url = "https://sample.herokuapp.com/auth/signup"
 const payload = {
   first_name: "Ricky",
   last_name: "Ponting",
@@ -66,7 +66,7 @@ This endpoint register a user.
 
 ### HTTP Request
 
-`POST https://alertizen.herokuapp.com/auth/signup`
+`POST https://sample.herokuapp.com/auth/signup`
 
 ### Request Payload
 
@@ -86,7 +86,7 @@ Remember — On successful registration you will get a JWT Auth Token!
 
 ```javascript
 const http = require('http');
-const url = "https://alertizen.herokuapp.com/auth/login"
+const url = "https://sample.herokuapp.com/auth/login"
 const payload = {
   email: "ricky@xyz.com",
   passowrd: "allowme"
@@ -106,7 +106,7 @@ This endpoint login a user.
 
 ### HTTP Request
 
-`POST https://alertizen.herokuapp.com/auth/login`
+`POST https://sample.herokuapp.com/auth/login`
 
 ### Request Parameters
 

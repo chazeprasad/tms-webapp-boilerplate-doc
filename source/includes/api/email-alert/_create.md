@@ -4,7 +4,7 @@
 const http = require('http');
 
 const headers = [] 
-headers.push({ Accept: "application/vnd.alertizen+json;version=1;" } ); 
+headers.push({ Accept: "application/vnd.sample+json;version=1;" } ); 
 headers.push({ Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" } ); 
 
 const payload = {
@@ -13,7 +13,7 @@ const payload = {
   owner: 1
 }
 
-const url = "https://alertizen.herokuapp.com/api/email-alerts"
+const url = "https://sample.herokuapp.com/api/email-alerts"
 http.post(url, payload);
 ```
 
@@ -21,7 +21,7 @@ http.post(url, payload);
 let url = "https://alertsizen.herokuapp.com/api/email-alerts"
 
 let headers: HTTPHeaders = [
-  "Accept": "application/vnd.alertizen+json;version=1;"
+  "Accept": "application/vnd.sample+json;version=1;"
   "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 ]
 
@@ -38,8 +38,8 @@ Alamofire.request(url, method: .post, parameters: payload, encoding: JSONEncodin
 
 
 ```shell
-curl https://alertizen.herokuapp.com/api/email-alerts
-  -H "Accept: application/vnd.alertizen+json;version=1;"
+curl https://sample.herokuapp.com/api/email-alerts
+  -H "Accept: application/vnd.sample+json;version=1;"
   -H "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
   -X POST
   --data '{ "is_active": true "email_id": "ricky@xyc.com", "owner": 1 }'
@@ -62,7 +62,7 @@ This endpoint create a Email Alert Settings.
 
 ### HTTP Request
 
-`POST https://alertizen.herokuapp.com/api/email-alerts`
+`POST https://sample.herokuapp.com/api/email-alerts`
 
 ### Request Payload
 

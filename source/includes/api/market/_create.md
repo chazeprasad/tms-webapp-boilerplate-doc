@@ -4,7 +4,7 @@
 const http = require('http');
 
 const headers = [] 
-headers.push({ Accept: "application/vnd.alertizen+json;version=1;" } ); 
+headers.push({ Accept: "application/vnd.sample+json;version=1;" } ); 
 headers.push({ Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" } ); 
 
 const payload = {
@@ -12,7 +12,7 @@ const payload = {
   vertices: "POLYGON((40.7566484549725 -73.9878561496734, 40.7556894646734 -73.9853026866913, 40.7545841705587 -73.9860537052154, 40.7548036054111 -73.9881458282471, 40.7559820394514 -73.9887895584106, 40.7566484549725 -73.9878561496734))"
 }
 
-const url = "https://alertizen.herokuapp.com/api/markets"
+const url = "https://sample.herokuapp.com/api/markets"
 http.post(url, payload);
 ```
 
@@ -20,7 +20,7 @@ http.post(url, payload);
 let url = "https://alertsizen.herokuapp.com/api/markets"
 
 let headers: HTTPHeaders = [
-  "Accept": "application/vnd.alertizen+json;version=1;"
+  "Accept": "application/vnd.sample+json;version=1;"
   "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 ]
 
@@ -36,8 +36,8 @@ Alamofire.request(url, method: .post, parameters: payload, encoding: JSONEncodin
 
 
 ```shell
-curl https://alertizen.herokuapp.com/api/markets
-  -H "Accept: application/vnd.alertizen+json;version=1;"
+curl https://sample.herokuapp.com/api/markets
+  -H "Accept: application/vnd.sample+json;version=1;"
   -H "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
   -X POST
   --data '{ "market_name": "market-1" "vertices": "POLYGON((40.7566484549725 -73.9878561496734, 40.7556894646734 -73.9853026866913, 40.7545841705587 -73.9860537052154, 40.7548036054111 -73.9881458282471, 40.7559820394514 -73.9887895584106, 40.7566484549725 -73.9878561496734))" }'
@@ -60,7 +60,7 @@ This endpoint create a markets.
 
 ### HTTP Request
 
-`POST https://alertizen.herokuapp.com/api/markets`
+`POST https://sample.herokuapp.com/api/markets`
 
 ### Request Payload
 

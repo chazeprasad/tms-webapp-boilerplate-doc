@@ -7,10 +7,10 @@ const http = require('http');
 
 const headers = []
 headers.push({ Content-Type: "application/json" } ); 
-headers.push({ Accept: "application/vnd.alertizen+json;version=1;" } ); 
+headers.push({ Accept: "application/vnd.sample+json;version=1;" } ); 
 headers.push({ Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" } ); 
 
-const url = "https://alertizen.herokuapp.com/api/monitoring-areas"
+const url = "https://sample.herokuapp.com/api/monitoring-areas"
 http.get(url);
 ```
 
@@ -61,7 +61,7 @@ This endpoint retrieves all Monitoring Areas.
 
 ### HTTP Request
 
-`POST https://alertizen.herokuapp.com/api/monitoring-areas`
+`POST https://sample.herokuapp.com/api/monitoring-areas`
 
 
 <aside class="success">

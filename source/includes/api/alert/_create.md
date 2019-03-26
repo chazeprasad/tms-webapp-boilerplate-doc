@@ -4,7 +4,7 @@
 const http = require('http');
 
 const headers = [] 
-headers.push({ Accept: "application/vnd.alertizen+json;version=1;" } ); 
+headers.push({ Accept: "application/vnd.sample+json;version=1;" } ); 
 headers.push({ Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" } ); 
 
 const payload = {
@@ -26,7 +26,7 @@ http.post(url, payload);
 let url = "https://alertsizen.herokuapp.com/api/alerts"
 
 let headers: HTTPHeaders = [
-  "Accept": "application/vnd.alertizen+json;version=1;"
+  "Accept": "application/vnd.sample+json;version=1;"
   "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 ]
 
@@ -48,8 +48,8 @@ Alamofire.request(url, method: .post, parameters: payload, encoding: JSONEncodin
 ```
 
 ```shell
-curl https://alertizen.herokuapp.com/api/alerts
-  -H "Accept: application/vnd.alertizen+json;version=1;"
+curl https://sample.herokuapp.com/api/alerts
+  -H "Accept: application/vnd.sample+json;version=1;"
   -H "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
   -X POST
   --data '{ "msg_id": "1111", "title": "911 Call Record", "body": "BURGLARY ALARMS", "msg_type": "911CR", "address": "1314 WAVERLY AV ,TO,NEAR DORR ST", "lat": 41.6533470153809, "lng": -83.5901184082031, "msg_date_time": "12/10/2013 05:19" }'
@@ -77,7 +77,7 @@ curl https://alertizen.herokuapp.com/api/alerts
 
 
 ```swift
-let url = "https://alertizen.herokuapp.com/auth/login"
+let url = "https://sample.herokuapp.com/auth/login"
 
 let headers: HTTPHeaders = [
   "Accept": "application/json"

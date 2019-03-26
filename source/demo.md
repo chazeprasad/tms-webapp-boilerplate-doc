@@ -4,7 +4,7 @@
 
 ```javascript
 const http = require('http');
-const url = "https://alertizen.herokuapp.com/auth/login"
+const url = "https://sample.herokuapp.com/auth/login"
 const payload = {
   email: "ricky@xyz.com",
   passowrd: "allowme"
@@ -24,7 +24,7 @@ This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-`POST https://alertizen.herokuapp.com/auth/login`
+`POST https://sample.herokuapp.com/auth/login`
 
 ### Request Parameters
 

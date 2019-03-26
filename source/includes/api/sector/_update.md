@@ -4,14 +4,14 @@
 const http = require('http');
 
 const headers = [] 
-headers.push({ Accept: "application/vnd.alertizen+json;version=1;" } ); 
+headers.push({ Accept: "application/vnd.sample+json;version=1;" } ); 
 headers.push({ Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" } ); 
 
 const payload = {
   sector_name: "Sector-1234
 }
 
-const url = "https://alertizen.herokuapp.com/api/sectors/1"
+const url = "https://sample.herokuapp.com/api/sectors/1"
 http.put(url, payload);
 ```
 
@@ -19,7 +19,7 @@ http.put(url, payload);
 let url = "https://alertsizen.herokuapp.com/api/sectors"
 
 let headers: HTTPHeaders = [
-  "Accept": "application/vnd.alertizen+json;version=1;"
+  "Accept": "application/vnd.sample+json;version=1;"
   "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 ]
 
@@ -34,8 +34,8 @@ Alamofire.request(url, method: .put, parameters: payload, encoding: JSONEncoding
 
 
 ```shell
-curl https://alertizen.herokuapp.com/api/sectors/1
-  -H "Accept: application/vnd.alertizen+json;version=1;"
+curl https://sample.herokuapp.com/api/sectors/1
+  -H "Accept: application/vnd.sample+json;version=1;"
   -H "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
   -X PUT
   --data '{ "sector_name": "Sector-1234" }'
@@ -54,7 +54,7 @@ This endpoint retrieves a specific Sectors.
 
 ### HTTP Request
 
-`PUT https://alertizen.herokuapp.com/api/sectors/<ID>`
+`PUT https://sample.herokuapp.com/api/sectors/<ID>`
 
 ### Request Payload
 

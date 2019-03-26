@@ -19,8 +19,9 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
-set :source, "#{File.dirname(__FILE__)}/source"
-set :build_dir, "#{File.dirname(__FILE__)}/build"
+set :source, "source"
+set :build_dir, "build"
+
 
 # Activate the syntax highlighter
 activate :syntax

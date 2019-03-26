@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "33d4ba28-2a78-472b-b69e-40b80e823b04",
-		"name": "Alertizen API",
+		"name": "sample API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -1772,7 +1772,7 @@
 		{
 			"id": "7897415b-e79a-433e-a9f9-3be24d0f65cb",
 			"key": "api_version",
-			"value": "application/vnd.alertizen+json;version=1;",
+			"value": "application/vnd.sample+json;version=1;",
 			"type": "string"
 		},
 		{

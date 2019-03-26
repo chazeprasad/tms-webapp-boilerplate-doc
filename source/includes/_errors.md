@@ -1,7 +1,7 @@
 # Errors
 
 
-The Alertizen API uses the following error codes:
+The sample API uses the following error codes:
 
 
 Error Code | Meaning

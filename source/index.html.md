@@ -9,8 +9,8 @@ language_tabs: # must be one of https://git.io/vQNgJ
   
 
 toc_footers:
-  - <a href='./postman/Alertizen-API.postman_collection.json' download>Postman Collection File</a>
-  - <a href='https://www.alertizen.com'>Alertizen</a>
+  - <a href='./postman/sample-API.postman_collection.json' download>Postman Collection File</a>
+  - <a href='https://www.sample.com'>sample</a>
 
 
 includes:
@@ -78,15 +78,15 @@ search: true
 
 # Introduction
 
-Welcome to the Alertizen API! Alertizen Web and Mobile app developers can use the API to access Alertizen API endpoints, which can get and set user information in our database. It also provides APIs for sending Push Notifications, Email Alerts and Text Alerts.
+Welcome to the sample API! sample Web and Mobile app developers can use the API to access sample API endpoints, which can get and set user information in our database. It also provides APIs for sending Push Notifications, Email Alerts and Text Alerts.
 
 We have language bindings in Shell, JavaScript and Swift! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 Also provided a Postman Collection File. Feel free to download the file from left Side Menu.
 
-Alertizen uses JWT(JSON Web Token) Authentication to allow access to the API. Please Register / Login to get a JWT Token.  
+sample uses JWT(JSON Web Token) Authentication to allow access to the API. Please Register / Login to get a JWT Token.  
 
-Alertizen API expects for the JWT AUTH Token to be included in all API requests (except user registration and login) to the server in a header that looks like the following:
+sample API expects for the JWT AUTH Token to be included in all API requests (except user registration and login) to the server in a header that looks like the following:
 
 `Authorization: JWT-AUTH-TOKEN`
 
@@ -100,15 +100,15 @@ In order to version the API we use server-driven content negotiation where the c
 
 According to the Media Type Specification, you can define your own media types using the vendor tree i.e. application/vnd.example.resource+json.
 
-Since we don't want to have the version number as part of the URI (this is argued as an anti-pattern), we define a custom vendor media type application/vnd.alertizen.{version_number}+json giving clients the ability to choose which API version they require.
+Since we don't want to have the version number as part of the URI (this is argued as an anti-pattern), we define a custom vendor media type application/vnd.sample.{version_number}+json giving clients the ability to choose which API version they require.
 
-Alertizen API expects for the API Version to be included in all API requests to the server in a header that looks like the following:
+sample API expects for the API Version to be included in all API requests to the server in a header that looks like the following:
 
-`Accept: application/vnd.alertizen.{VERSION_NUMBER}+json;`
+`Accept: application/vnd.sample.{VERSION_NUMBER}+json;`
 
 <aside class="notice">
 You must replace <code>VERSION_NUMBER</code> with your Version.
-eg: <code> Accept: application/vnd.alertizen+json;version=1; </code>
+eg: <code> Accept: application/vnd.sample+json;version=1; </code>
 </aside>
 
 ## Authorization
@@ -136,7 +136,7 @@ The Role User have all the privilages on his/her profile and alert/message APIs.
 
 ```javascript
 const http = require('http');
-const url = "https://alertizen.herokuapp.com/auth/signup"
+const url = "https://sample.herokuapp.com/auth/signup"
 const payload = {
   username: "ricky@xyz.com",
   first_name: "Ricky",
@@ -149,7 +149,7 @@ http.post(url, payload);
 ```
 
 ```swift
-let url = "https://alertizen.herokuapp.com/auth/signup"
+let url = "https://sample.herokuapp.com/auth/signup"
 
 var headers: HTTPHeaders = HTTPHeaders()
 headers["Accept"] = "application/json"
@@ -170,7 +170,7 @@ Alamofire.request(url, method: .post, parameters: payload, encoding: JSONEncodin
 ```
 
 ```shell
-curl https://alertizen.herokuapp.com/auth/signup
+curl https://sample.herokuapp.com/auth/signup
   -H "Content-Type: application/json"
   -X POST
   --data '{"username": "ricky@xyz.com", "first_name": "Ricky", "last_name": "Ponting", "email": "ricky@xyz.com", "password": "allowme", "confirm_password": "allowme"}'
@@ -189,7 +189,7 @@ This endpoint register a user.
 
 ### HTTP Request
 
-`POST https://alertizen.herokuapp.com/auth/signup`
+`POST https://sample.herokuapp.com/auth/signup`
 
 ### Request Payload
 
@@ -210,7 +210,7 @@ Remember — On successful registration you will get a JWT Auth Token!
 
 ```javascript
 const http = require('http');
-const url = "https://alertizen.herokuapp.com/auth/login"
+const url = "https://sample.herokuapp.com/auth/login"
 const payload = {
   username: "ricky@xyz.com",
   password: "allowme"
@@ -219,7 +219,7 @@ http.post(url, payload);
 ```
 
 ```swift
-let url = "https://alertizen.herokuapp.com/auth/login"
+let url = "https://sample.herokuapp.com/auth/login"
 
 var headers: HTTPHeaders = HTTPHeaders()
 headers["Accept"] = "application/json"
@@ -237,7 +237,7 @@ Alamofire.request(url, method: .post, parameters: payload, encoding: JSONEncodin
 
 
 ```shell
-curl https://alertizen.herokuapp.com/auth/signup
+curl https://sample.herokuapp.com/auth/signup
   -H "Content-Type: application/json"
   -X POST
   --data '{"username": "ricky@xyz.com", "password": "allowme"}'
@@ -255,7 +255,7 @@ This endpoint login a user.
 
 ### HTTP Request
 
-`POST https://alertizen.herokuapp.com/auth/login`
+`POST https://sample.herokuapp.com/auth/login`
 
 ### Request Parameters
 
