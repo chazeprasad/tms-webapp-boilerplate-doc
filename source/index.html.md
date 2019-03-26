@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: TMS Webapp Boilerplate
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
@@ -9,7 +9,7 @@ toc_footers:
 
 
 includes:
-  # - api/sample/index
+  - doc/browser-support
   # - api/sample/show
   # - api/sample/create
   # - api/sample/update
@@ -30,7 +30,8 @@ Its purpose is to provide a set of tools intended to make front-end development 
 We have language bindings JavaScript! You can view code examples in the dark area to the right.
 
 
-## It features the following technologies:
+## Technologies
+It features the following technologies:
 
 
 - [React 16](https://github.com/facebook/react)
