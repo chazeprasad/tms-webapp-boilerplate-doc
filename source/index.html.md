@@ -2,15 +2,10 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
   - javascript
-  - swift
-
-  
 
 toc_footers:
-  - <a href='./postman/sample-API.postman_collection.json' download>Postman Collection File</a>
-  - <a href='https://www.sample.com'>sample</a>
+  - <a href='https://www.highradius.com'>Highradius</a>
 
 
 includes:
