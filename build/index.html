@@ -1,0 +1,732 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>TMS Webapp Boilerplate</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.svg" class="logo" alt="Logo" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#technologies" class="toc-h2 toc-link" data-title="Technologies">Technologies</a>
+                  </li>
+                  <li>
+                    <a href="#browser-support" class="toc-h2 toc-link" data-title="Browser Support">Browser Support</a>
+                  </li>
+                  <li>
+                    <a href="#ui-design" class="toc-h2 toc-link" data-title="UI Design">UI Design</a>
+                  </li>
+                  <li>
+                    <a href="#css-preprocessor" class="toc-h2 toc-link" data-title="CSS Preprocessor">CSS Preprocessor</a>
+                  </li>
+                  <li>
+                    <a href="#ui-framework" class="toc-h2 toc-link" data-title="UI Framework">UI Framework</a>
+                  </li>
+                  <li>
+                    <a href="#file-structure" class="toc-h2 toc-link" data-title="File Structure">File Structure</a>
+                  </li>
+                  <li>
+                    <a href="#internationalization" class="toc-h2 toc-link" data-title="Internationalization">Internationalization</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#javascript-es6-best-practices" class="toc-h1 toc-link" data-title="JavaScript | ES6 Best Practices">JavaScript | ES6 Best Practices</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#variables-var-let-and-const" class="toc-h2 toc-link" data-title="Variables: var, let and const">Variables: <code>var, let and const</code></a>
+                  </li>
+                  <li>
+                    <a href="#arrow-functions" class="toc-h2 toc-link" data-title="Arrow functions">Arrow functions</a>
+                  </li>
+                  <li>
+                    <a href="#declare-outside-of-the-for" class="toc-h2 toc-link" data-title="Declare Outside of the for">Declare Outside of the <code>for</code></a>
+                  </li>
+                  <li>
+                    <a href="#use-instead-of" class="toc-h2 toc-link" data-title="Use === Instead of ==">Use === Instead of ==</a>
+                  </li>
+                  <li>
+                    <a href="#don-39-t-use-short-hand" class="toc-h2 toc-link" data-title="Don't Use Short-Hand">Don't Use Short-Hand</a>
+                  </li>
+                  <li>
+                    <a href="#comment-your-code" class="toc-h2 toc-link" data-title="Comment Your Code">Comment Your Code</a>
+                  </li>
+                  <li>
+                    <a href="#always-always-use-semicolons" class="toc-h2 toc-link" data-title="Always, Always Use Semicolons">Always, Always Use Semicolons</a>
+                  </li>
+                  <li>
+                    <a href="#pure-functions" class="toc-h2 toc-link" data-title="Pure functions">Pure functions</a>
+                  </li>
+                  <li>
+                    <a href="#classes" class="toc-h2 toc-link" data-title="Classes">Classes</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#react-redux-best-practices" class="toc-h1 toc-link" data-title="React Redux Best Practices">React Redux Best Practices</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#presentational-components" class="toc-h2 toc-link" data-title="Presentational Components">Presentational Components</a>
+                  </li>
+                  <li>
+                    <a href="#container-components" class="toc-h2 toc-link" data-title="Container Components">Container Components</a>
+                  </li>
+                  <li>
+                    <a href="#avoid-setstate" class="toc-h2 toc-link" data-title="Avoid setState">Avoid setState</a>
+                  </li>
+                  <li>
+                    <a href="#write-cleaner-code-using-es6-features" class="toc-h2 toc-link" data-title="Write cleaner code using ES6 Features">Write cleaner code using ES6 Features</a>
+                  </li>
+                  <li>
+                    <a href="#use-flow-types" class="toc-h2 toc-link" data-title="Use Flow Types">Use Flow Types</a>
+                  </li>
+                  <li>
+                    <a href="#use-axios-library" class="toc-h2 toc-link" data-title="Use Axios library">Use Axios library</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://www.highradius.com'>Highradius</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>This theme project is designed to get you up and running with a bunch of awesome front-end technologies.</p>
+
+<p>The primary goal of this project is to provide a stable foundation upon which to build modern web appliications based on React, Redux and Material Design UI.  </p>
+
+<p>Its purpose is to provide a set of tools intended to make front-end development robust, easy, and, most importantly, fun.</p>
+
+<p>We have language bindings JavaScript! You can view code examples in the dark area to the right.</p>
+<h2 id='technologies'>Technologies</h2>
+<p>It features the following technologies:</p>
+
+<ul>
+<li><a href="https://github.com/facebook/react">React 16</a></li>
+<li><a href="https://github.com/redux-saga/redux-saga">Redux 4</a> for State Management</li>
+<li><a href="https://github.com/ReactTraining/react-router">React Router 4</a></li>
+<li><a href="https://github.com/webpack/webpack">Webpack 4</a> as Bundler</li>
+<li><a href="https://webpack.github.io/docs/hot-module-replacement.html">Hot-reloading</a></li>
+<li><a href="https://www.google.com/design/spec/material-design/introduction.html">Material UI design</a></li>
+<li><a href="https://sass-lang.com/">SASS/SCSS</a> as CSS Preprocessor</li>
+<li><a href="https://sass-lang.com/">PostCSS</a> for transforming CSS to JavaScript</li>
+<li><a href="https://cssinjs.org/">CSS-in-JS</a> for writing CSS in JS</li>
+<li><a href="https://github.com/malte-wessel/react-custom-scrollbars">React Scrollbar</a> for slim scrollbar on Windows</li>
+<li><a href="https://github.com/axios/axios">Axios</a> as HTTP Request Library.</li>
+<li><a href="https://github.com/redux-saga/redux-saga">Redux Saga</a> redux middleware for Asynchronous API Request.</li>
+<li><a href="https://github.com/reduxjs/reselect">Reselect</a> selector library for Redux</li>
+<li><a href="http://airbnb.io/polyglot.js/">Polyglot</a> for Internationalization</li>
+<li><a href="http://eslint.org/">ESLint</a> for JS and JSX</li>
+<li><a href="https://facebook.github.io/jest">Jest</a> for Unit Testing</li>
+<li><a href="https://yarnpkg.com/en/">NPM</a> as Package Manager</li>
+</ul>
+<h2 id='browser-support'>Browser Support</h2>
+<p>It has tested on the following browsers including Mobile Safari and Mobile Chrome.</p>
+
+<table><thead>
+<tr>
+<th><img src="images/browser/chrome_48x48.png" alt="Chrome" /></th>
+<th><img src="images/browser/firefox_48x48.png" alt="Firefox" /></th>
+<th><img src="images/browser/safari_48x48.png" alt="Safari" /></th>
+<th><img src="images/browser/opera_48x48.png" alt="Opera" /></th>
+<th><img src="images/browser/edge_48x48.png" alt="Edge" /></th>
+<th><img src="images/browser/internet-explorer_48x48.png" alt="IE" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+<td>11 ✔</td>
+</tr>
+</tbody></table>
+<h2 id='ui-design'>UI Design</h2>
+<p>The UI is fully Responsive and adapt to any possible screen size.</p>
+
+<p>It uses the Flexbox Layout officially called <a href="https://www.w3.org/TR/css-flexbox/">CSS Flexible Box Layout Module</a>. </p>
+
+<p>Flexbox is new layout module in CSS3 made to improve the items align, directions and order in the container even when they are with dynamic or even unknown size. The prime characteristic of the flex container is the ability to modify the width or height of its children to fill the available space in the best possible way on different screen sizes.</p>
+
+<p>For large scale layout the new <a href="https://www.w3.org/TR/css-grid/">CSS Grid Layout Module</a> will be a better choice in the near future, when CSS Grid Layouts have full browser support. Browser support is increasing all the time; we can check out <a href="https://caniuse.com/#search=css%20grid%20layout">Can I Use</a> for the most up to date information.</p>
+
+<p>We will be able to take the combined advantages of each and create the most efficient and interesting UI designs.</p>
+<h2 id='css-preprocessor'>CSS Preprocessor</h2>
+<p>We use <a href="https://sass-lang.com/">Sass</a> and <a href="https://cssinjs.org">CSS-in-JS</a> as Css preprocessor. </p>
+
+<aside class="notice">
+  CSS-in-JS is still in alpha. But it is highly recommend for styling components and creating themes. This is the future... It unlocks many great features (theme nesting, dynamic styles, etc.)
+</aside>
+<h2 id='ui-framework'>UI Framework</h2>
+<p>We use <a href="https://material-ui.com">Material UI React</a> from <a href="https://www.creative-tim.com">Creative Tim</a> as UI Framework.</p>
+
+<p>Material-UI is an MIT-licensed open source project. It&#39;s an independent project with ongoing development. We use Material UI version 3.9.2 in this project.</p>
+<h2 id='file-structure'>File Structure</h2>
+<ul>
+<li>Structure application by features</li>
+<li>Feature is a vertical slice through application layers</li>
+<li>There should be some value when feature is done</li>
+<li>Organizing files by feature allows for quicker deletion/refactoring</li>
+</ul>
+
+<p>This project uses Folder By Feature structure to organise files by placing everything that is unique to one area of the code together. For instance, if we were making a login feature, we would have a folder for Login and in this folder we would have our login components, actions, reducers, selectors, etc. This arranges our code by what the code’s mission is and how it contributes to the overall goal of the project rather than the technology.</p>
+<h3 id='benefits-of-this-model'>Benefits of this model</h3>
+<aside class="notice">
+  Code is structured in a way that reflects purpose. This makes it easier to find files and know where things belong. Additionally, it helps clarify how a bit of code contributes to the overall goals of an application.
+</aside>
+
+<aside class="notice">
+  Code is easier to refactor. If a feature has one entry point, it’s clear that removing the feature will have limited impact on the rest of the system. Additionally, if changes are made to a login feature, they should have no impact on a any other feature.
+</aside>
+
+<aside class="notice">
+  Write features that do one thing and do it well. Write features to work together.
+</aside>
+
+<p><a href="https://medium.com/@alexmngn/why-react-developers-should-modularize-their-applications-d26d381854c1">Why React developers should modularize their applications?</a></p>
+<h3 id='application-file-structure'>Application File Structure</h3><pre class="highlight plaintext"><code>.
+├── app                         [ App root directory (./src/app) ]
+│   ├── core                    [ Core utilities &amp; redux middlewares ]
+│   │   ├── util
+│   │   └── middleware
+│   ├── i18n                    [ Internationalisation files ]
+│   └── module                  [ Application modules ]
+├── media                       [ Assets like images ]
+├── sass                        [ Sass files ]
+├── App.jsx                     [ App component ]
+├── Index.jsx                   [ Entry point ]
+├── Routing.jsx                 [ Routing ]
+├── Saga.js                     [ Root Saga Watcher ]
+├── State.js                    [ Root Reducer &amp; initial State ]
+└── Store.js                    [ Redux Store ]
+</code></pre><h3 id='module-file-structure'>Module File Structure</h3>
+<p>Module can be a feature or component. </p>
+<pre class="highlight plaintext"><code>.
+└── module                      [ Root directory for modules (./src/app/module) ]
+    └── sample                  [ Sample module ] 
+        ├── Sample.jsx          [ Container Component ]
+        ├── SampleView.jsx      [ Presentational Component ]
+        ├── SampleStyle.js      [ CSS-in-JS ]
+        ├── sample.scss         [ Sass Stylesheet ]
+        ├── SampleState.js      [ Redux state &amp; Reducer ]
+        ├── SampleAction.js     [ Redux Action ]
+        ├── SampleSaga.js       [ Redux Saga Worker ]
+        ├── SampleService.js    [ Api service ]
+        └── SampleSelector.js   [ Selectors ]
+</code></pre><h2 id='internationalization'>Internationalization</h2>
+<p>This project uses <a href="http://airbnb.io/polyglot.js/">Airbnb Polyglot</a> framework for internationalization. PolyglotJS is a tiny I18n helper library written in JavaScript. It provides a simple solution for interpolation and pluralization. Internatinalisation is decoupled from application by handling it through Redux. Internationalization data will be store in redux store and can be switch to any language by dispatching Action from any component. It removes any coupling with Polyglot and makes the component / module reusable.</p>
+<h1 id='javascript-es6-best-practices'>JavaScript | ES6 Best Practices</h1><h2 id='variables-var-let-and-const'>Variables: <code>var, let and const</code></h2>
+<aside class="warning">
+Consider <code>var</code> deprecated. There is no use case for it anymore.
+</aside>
+
+<aside class="notice">
+There's very few use cases for <code>let</code>. On many occasions you can use functions like <code>map</code> and <code>reduce</code> to avoid using it.
+</aside>
+<h3 id='deprecated'>Deprecated:</h3><pre class="highlight jsx tab-jsx"><code>
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s1">'foo'</span><span class="p">;</span>
+
+</code></pre><h3 id='avoid'>Avoid:</h3><pre class="highlight jsx tab-jsx"><code><span class="kd">let</span> <span class="nx">bar</span> <span class="o">=</span> <span class="s1">'bar'</span><span class="p">;</span>
+</code></pre><h3 id='avoid-2'>Avoid:</h3><pre class="highlight jsx tab-jsx"><code><span class="kr">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s1">'foo'</span><span class="p">,</span>
+  <span class="nx">bar</span> <span class="o">=</span> <span class="s1">'bar'</span><span class="p">,</span>
+  <span class="nx">baz</span> <span class="o">=</span> <span class="s1">'baz'</span><span class="p">;</span>
+</code></pre><h3 id='recommended'>Recommended:</h3><pre class="highlight jsx tab-jsx"><code><span class="kr">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s1">'foo'</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">bar</span> <span class="o">=</span> <span class="s1">'bar'</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">baz</span> <span class="o">=</span> <span class="s1">'baz'</span><span class="p">;</span>
+</code></pre>
+<aside class="notice">
+Declare variables where you use them.
+</aside>
+
+<aside class="notice">
+Declare each variable as a full statement. It avoids the dangling comma discussion.
+</aside>
+
+<aside class="notice">
+Separate logical chunks of code with an empty line.
+</aside>
+<h2 id='arrow-functions'>Arrow functions</h2>
+<p>With the addition of the arrow function syntax, we have gained a very elegant and convenient way to define anonymous functions. Because they use &#39;lexical this&#39;, usage of this is more predictable. Therefore you should use arrows instead of regular anonymous functions.</p>
+
+<aside class="warning">
+Consider anonymous functions deprecated. We have arrow functions for that now.
+</aside>
+
+<aside class="notice">
+Use arrow functions only as part of a larger (named) entity, not as a stand-alone entity.
+</aside>
+
+<aside class="notice">
+Declare functions after using them by leveraging function hoisting.
+</aside>
+<h3 id='deprecated-2'>Deprecated</h3><pre class="highlight jsx tab-jsx"><code><span class="kd">function</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">string</span><span class="p">.</span><span class="nx">toLocaleUpperCase</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre><h3 id='recommended-2'>Recommended</h3><pre class="highlight jsx tab-jsx"><code><span class="kd">function</span> <span class="nx">upper</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">string</span><span class="p">.</span><span class="nx">toLocaleUpperCase</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre><h3 id='use-wisely'>Use wisely</h3><pre class="highlight jsx tab-jsx"><code><span class="nx">string</span> <span class="o">=&gt;</span> <span class="nx">string</span><span class="p">.</span><span class="nx">toLocaleUpperCase</span><span class="p">()</span>
+
+<span class="c1">// if it fits your style</span>
+<span class="kr">const</span> <span class="nx">upper</span> <span class="o">=</span> <span class="nx">string</span> <span class="o">=&gt;</span> <span class="nx">string</span><span class="p">.</span><span class="nx">toLocaleUpperCase</span><span class="p">()</span>
+</code></pre><h2 id='declare-outside-of-the-for'>Declare Outside of the <code>for</code></h2>
+<p>When executing lengthy &quot;for&quot; statements, don&#39;t make the engine work any harder than it must. For example:</p>
+<h3 id='bad'>Bad</h3><pre class="highlight jsx tab-jsx"><code>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'container'</span><span class="p">);</span>
+   <span class="nx">container</span><span class="p">.</span><span class="nx">innerHtml</span> <span class="o">+=</span> <span class="s1">'my number: '</span> <span class="o">+</span> <span class="nx">i</span><span class="p">;</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre><h3 id='better'>Better</h3><pre class="highlight jsx tab-jsx"><code><span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'container'</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span>  <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">container</span><span class="p">.</span><span class="nx">innerHtml</span> <span class="o">+=</span> <span class="s1">'my number: '</span> <span class="o">+</span> <span class="nx">i</span><span class="p">;</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre><h2 id='use-instead-of'>Use === Instead of ==</h2>
+<p>JavaScript utilizes two different kinds of equality operators</p>
+<pre class="highlight jsx tab-jsx"><code><span class="nx">a</span> <span class="o">===</span> <span class="nx">b</span>
+<span class="nx">a</span> <span class="o">!==</span> <span class="nx">b</span>
+</code></pre>
+<p>and </p>
+<pre class="highlight jsx tab-jsx"><code><span class="nx">a</span> <span class="o">==</span> <span class="nx">b</span>
+<span class="nx">a</span> <span class="o">!=</span> <span class="nx">b</span>
+</code></pre>
+<aside class="notice">
+when working with == and !=, you'll run into issues when working with different types. In these cases, they'll try to coerce the values, unsuccessfully.
+</aside>
+<h2 id='don-39-t-use-short-hand'>Don&#39;t Use Short-Hand</h2>
+<p>Technically, you can get away with omitting most curly braces and semi-colons. Most browsers will correctly interpret the following:</p>
+<h3 id='bad-2'>Bad</h3><pre class="highlight jsx tab-jsx"><code><span class="k">if</span><span class="p">(</span><span class="nx">someVariableExists</span><span class="p">)</span>
+<span class="nx">x</span> <span class="o">=</span> <span class="nx">fals</span>
+</code></pre><h3 id='better-2'>Better</h3><pre class="highlight jsx tab-jsx"><code><span class="k">if</span><span class="p">(</span><span class="nx">someVariableExists</span><span class="p">)</span>
+<span class="nx">x</span> <span class="o">=</span> <span class="kc">false</span>
+</code></pre><h2 id='comment-your-code'>Comment Your Code</h2>
+<p>It might seem unnecessary at first, but you must comment your code as best as possible. What happens when you return to the project months later, only to find that you can&#39;t easily remember what your line of thinking was. Or, what if one of your colleagues needs to revise your code? Always, always comment important sections of your code.</p>
+<pre class="highlight jsx tab-jsx"><code><span class="c1">// Cycle through array and echo out each name. </span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre><h2 id='always-always-use-semicolons'>Always, Always Use Semicolons</h2>
+<p>Technically, most browsers will allow you to get away with omitting semi-colons.</p>
+<h3 id='bad-3'>Bad</h3><pre class="highlight jsx tab-jsx"><code><span class="kd">var</span> <span class="nx">someItem</span> <span class="o">=</span> <span class="s1">'some string'</span>
+<span class="kd">function</span> <span class="nx">doSomething</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s1">'something'</span>
+<span class="p">}</span>
+</code></pre>
+<p>Having said that, this is a very bad practice that can potentially lead to much bigger and harder to find, issues.</p>
+<h3 id='better-3'>Better</h3><pre class="highlight jsx tab-jsx"><code><span class="kd">var</span> <span class="nx">someItem</span> <span class="o">=</span> <span class="s1">'some string'</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">doSomething</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s1">'something'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre><h2 id='pure-functions'>Pure functions</h2>
+<aside class="warning">
+Don't use shared mutable state or access variables from outer scope.
+</aside>
+
+<aside class="warning">
+Don't cause any side effects by running a function.
+</aside>
+
+<aside class="warning">
+Don't mutate any passed arguments, return a new value instead.
+</aside>
+<pre class="highlight javascript tab-javascript"><code><span class="c1">// avoid side-effects</span>
+<span class="kd">let</span> <span class="nx">x</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">inc</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">x</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// recommended</span>
+<span class="kd">function</span> <span class="nx">inc</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// avoid mutation</span>
+<span class="kd">function</span> <span class="nx">inc</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">object</span><span class="p">.</span><span class="nx">value</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// recommended</span>
+<span class="kd">function</span> <span class="nx">inc</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">object</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="nx">object</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">};</span>
+<span class="p">}</span>
+</code></pre><h2 id='classes'>Classes</h2>
+<p>Classes have always been a hot topic of discussion in the JavaScript world. ES6 has introduced a new way to define classes, even though there is a growing tendency to avoid them. Programmers coming from an OOP background will appreciate them while the more functionally inclined don&#39;t like them. Developers working with React and Redux mostly prefer the functional approach, which is why using classes is discouraged. Downsides include: <br /></p>
+
+<ul>
+<li>Classes encourage mutation because they contain state.</li>
+<li>Classes encourage coupling because they are used as contracts.</li>
+<li>Classes encourage inheritance, but we want composition.</li>
+<li>Instances can&#39;t be easily cloned without losing their type, making it hard to write pure functions.</li>
+<li>Instance methods can&#39;t really be pure, it wouldn&#39;t make sense.</li>
+<li>Properties are never really private.</li>
+</ul>
+
+<aside class="warning">
+Only use classes if you have a very good reason for it.
+</aside>
+
+<aside class="success">
+Prefer composition over inheritance ("foo HAS a bar" instead of "foo IS a bar").
+</aside>
+
+<aside class="warning">
+Never inherit more than one level deep.
+</aside>
+
+<aside class="warning">
+Never use instanceof checks, use duck typing instead.
+</aside>
+<h1 id='react-redux-best-practices'>React Redux Best Practices</h1>
+<aside class="notice">
+Differentiate Presentational Components and Container Components. <br />
+When we are architecting a react application with redux, we should split our components into presentational and container components.
+</aside>
+<h2 id='presentational-components'>Presentational Components</h2>
+<p>Presentational components are components that render HTML. All our presentational components are stateless components, so are written as functional stateless components unless they need state and lifecycle hooks. Presentational components will not interact with redux store for state. They receive data via props and render it.</p>
+<pre class="highlight jsx tab-jsx"><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">TodoView</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">todo</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">(</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Task:<span class="si">{</span><span class="nx">todod</span><span class="p">.</span><span class="nx">task</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">);</span>
+</code></pre><h2 id='container-components'>Container Components</h2>
+<p>Container components are for getting data from redux store and providing the data to the presentational components. They tend to be stateful.</p>
+<pre class="highlight jsx tab-jsx"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react-redux'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">TodoView</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">'./TodoView'</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">Todo</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nc">TodoView</span> <span class="err">{</span><span class="p">...</span><span class="nt">this</span><span class="p">.</span><span class="nt">props</span><span class="err">}</span><span class="p">/&gt;</span> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">stateToProps</span> <span class="o">=</span> <span class="nx">state</span> <span class="o">=&gt;</span> <span class="p">({</span>
+  <span class="na">todo</span><span class="p">:</span><span class="nx">state</span><span class="p">.</span><span class="nx">todo</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">connect</span><span class="p">(</span><span class="nx">mapStateToProps</span><span class="p">)(</span><span class="nx">Todo</span><span class="p">);</span>
+</code></pre>
+<aside class="success">
+We can also declare Container Component as Functional Component
+</aside>
+<pre class="highlight jsx tab-jsx"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react-redux'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">TodoView</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">'./TodoView'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">Todo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nc">TodoView</span> <span class="err">{</span><span class="p">...</span><span class="nt">this</span><span class="p">.</span><span class="nt">props</span><span class="err">}</span><span class="p">/&gt;</span> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;)</span>
+<span class="p">)</span>
+
+<span class="kr">const</span> <span class="nx">stateToProps</span> <span class="o">=</span> <span class="nx">state</span> <span class="o">=&gt;</span> <span class="p">({</span>
+  <span class="na">todo</span><span class="p">:</span><span class="nx">state</span><span class="p">.</span><span class="nx">todo</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">connect</span><span class="p">(</span><span class="nx">mapStateToProps</span><span class="p">)(</span><span class="nx">Todo</span><span class="p">);</span>
+</code></pre>
+<aside class="notice">
+We can see improved performance when using stateless functional components.These components avoid unnecessary checks and memory allocations and are therefore more performant.
+</aside>
+
+<aside class="notice">
+It will be easy to test a component , if you write the component as simple as possible by splitting presentational components and container components.
+</aside>
+  
+<h2 id='avoid-setstate'>Avoid setState</h2>
+<aside class="warning">
+Try to avoid using setState and component lifecycle hooks when using Redux
+</aside>
+
+<p>Manage the application state using redux store when it is global state. Try to avoid using setState in your component when you are using state management libraries like redux. Use component state when it makes sense ie. A Button component that shows a tooltip when hovered would not use Redux.</p>
+<h2 id='write-cleaner-code-using-es6-features'>Write cleaner code using ES6 Features</h2>
+<p>Writing cleaner code will make the developers life easy to understand and maintain the code. ES6 features will give us much cleaner way of writing code in React.</p>
+
+<aside class="notice">
+Use Destructuring & spread attributes
+</aside>
+<h3 id='avoid-this'>Avoid this.</h3><pre class="highlight jsx tab-jsx"><code><span class="kr">class</span> <span class="nx">AutoloadingPostsGrid</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">className</span><span class="si">}</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">PostsGrid</span> <span class="na">gridVal=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">gridVal</span><span class="si">}</span> <span class="na">userId=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">userId</span><span class="si">}</span> <span class="na">panelNo=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">panelNo</span><span class="si">}</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleLoadMoreClick</span><span class="si">}</span><span class="p">&gt;</span>Load more<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><h3 id='instead-do-this'>Instead do this.</h3><pre class="highlight jsx tab-jsx"><code><span class="kr">class</span> <span class="nx">AutoloadingPostsGrid</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">{</span>
+      <span class="nx">className</span><span class="p">,</span>
+      <span class="p">...</span><span class="nx">others</span>  <span class="c1">// contains all properties of this.props except for className</span>
+    <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="si">{</span><span class="nx">className</span><span class="si">}</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">PostsGrid</span> <span class="err">{</span><span class="p">...</span><span class="nt">others</span><span class="err">}</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleLoadMoreClick</span><span class="si">}</span><span class="p">&gt;</span>Load more<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<aside class="notice">
+Use Arrow functions
+</aside>
+<h3 id='avoid-this-2'>Avoid this:</h3><pre class="highlight jsx tab-jsx"><code><span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">renderTodoList</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">renderTodoList</span><span class="p">(</span><span class="nx">arrayOfTodos</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">arrayOfComponents</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arrayOfTodos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">thisTodo</span> <span class="o">=</span> <span class="nx">arrayOfTodos</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+      <span class="nx">arrayOfComponents</span><span class="p">.</span><span class="nx">push</span><span class="p">(&lt;</span><span class="nc">Todo</span> <span class="na">key=</span><span class="si">{</span><span class="nx">thisTodo</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span> <span class="na">text=</span><span class="si">{</span><span class="nx">thisTodo</span><span class="p">.</span><span class="nx">text</span><span class="si">}</span> <span class="p">/&gt;);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">arrayOfComponents</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre><h3 id='instead-do-this-2'>Instead do this:</h3><pre class="highlight jsx tab-jsx"><code>  <span class="nx">renderTodoList</span> <span class="o">=</span> <span class="nx">arrayOfTodos</span> <span class="o">=&gt;</span>
+    <span class="nx">arrayOfTodos</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">todo</span> <span class="o">=&gt;</span> <span class="p">&lt;</span><span class="nc">Todo</span> <span class="na">key=</span><span class="si">{</span><span class="nx">todo</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span> <span class="err">{</span><span class="p">...</span><span class="nt">todo</span><span class="err">}</span> <span class="p">/&gt;);</span>
+</code></pre><h2 id='use-flow-types'>Use Flow Types</h2>
+<aside class="notice">
+  Type checking is expected to be the future of JS.
+</aside>
+
+<p>As the javascript project grows without typing, the more difficult refactoring will become. The larger the project the higher the risk when refactoring. Using type checking may not completely eliminate risk but it will greatly reduce it.</p>
+<h3 id='benefits-in-using-flow'>Benefits in using flow:</h3>
+<ul>
+<li>On time detection of bugs or errors.</li>
+<li>Communicates the purpose of the function.</li>
+<li>It Scales Down Complex Error Handling.</li>
+<li>Wipes Out Runtime Type Errors.</li>
+</ul>
+<h2 id='use-axios-library'>Use Axios library</h2>
+<aside class="notice">
+  Use Axios library for http requests over jQuery ajax
+</aside>
+
+<p>Fetch API and axios are the most preferable ways of making http requests. Between those two there are some advantages of using axios library. They are
+* It allows performing transforms on data before request is made or after response is received.
+* It allows you to alter the request or response entirely (headers as well). also perform async operations before request is made or before Promise settles.
+* Built-in XSRF protection.</p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

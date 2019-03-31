@@ -1,0 +1,41 @@
+<h1 id='authentication'>Authentication</h1><h2 id='user-login'>User Login</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">"https://sample.herokuapp.com/auth/login"</span>
+<span class="kr">const</span> <span class="nx">payload</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">email</span><span class="p">:</span> <span class="s2">"ricky@xyz.com"</span><span class="p">,</span>
+  <span class="na">passowrd</span><span class="p">:</span> <span class="s2">"allowme"</span>
+<span class="p">}</span>
+<span class="nx">http</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">payload</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all kittens.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://sample.herokuapp.com/auth/login</code></p>
+<h3 id='request-parameters'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>Required</td>
+<td>Last Name of the user.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Required</td>
+<td>Password.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — On successful registration you will get a JWT Auth Token!
+</aside>

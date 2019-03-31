@@ -558,7 +558,8 @@ html, body {
 // These are the styles for phones and tablets
 // There are also a couple styles disperesed
 
-@media (max-width: $tablet-width) {
+// @media (max-width: $tablet-width) {
+@media (max-width: 600px) {
   .toc-wrapper {
     left: -$nav-width;
 
@@ -581,7 +582,8 @@ html, body {
   }
 }
 
-@media (max-width: $phone-width) {
+// @media (max-width: $phone-width) {
+@media (max-width: 2000px) {
   .dark-box {
     display: none;
   }
