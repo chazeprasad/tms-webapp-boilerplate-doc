@@ -1,1 +1,1 @@
-web: bundle exec middleman build --clean && puma -p $PORT
+web: bundle exec middleman build --verbose --clean && puma -p $PORT
