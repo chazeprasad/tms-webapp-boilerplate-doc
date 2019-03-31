@@ -21,6 +21,7 @@ set :images_dir, 'images'
 set :fonts_dir, 'fonts'
 set :source, "source"
 set :build_dir, "build"
+set :doc_dir, "source/includes/doc"
 
 
 # Activate the syntax highlighter
