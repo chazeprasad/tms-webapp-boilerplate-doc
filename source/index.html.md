@@ -10,8 +10,8 @@ toc_footers:
 
 includes:
   # - doc/es6
-  - doc/best-practice-js
-  - doc/react-redux
+  - doc/best_practice_js
+  - doc/react_redux
   
 
 search: true
