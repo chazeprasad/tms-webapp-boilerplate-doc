@@ -44,7 +44,7 @@ It features the following technologies:
 - [PostCSS](https://sass-lang.com/) for transforming CSS to JavaScript
 - [CSS-in-JS](https://cssinjs.org/) for writing CSS in JS
 - [React Scrollbar](https://github.com/malte-wessel/react-custom-scrollbars) for slim scrollbar on Windows
-- [Axios](https://github.com/axios/axios) as HTTP Request client.
+- [Axios](https://github.com/axios/axios) as HTTP Request Library.
 - [Redux Saga](https://github.com/redux-saga/redux-saga) redux middleware for Asynchronous API Request.
 - [Reselect](https://github.com/reduxjs/reselect) selector library for Redux
 - [Polyglot](http://airbnb.io/polyglot.js/) for Internationalization
